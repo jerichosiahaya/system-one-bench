@@ -171,8 +171,8 @@ mkdir -p _site && cp site/* results.json results_vision.json _site/ && python3 .
 
 The roadmap lives in `site/meta.json` and is published at [systemonebench.dev/#roadmap](https://systemonebench.dev/#roadmap).
 As of 2026-10-18 it lists 4 hosted models on their own APIs with the same request shape (Fastino GLiDE, Celeris-1
-Decision, Hanzo Kai 1, meraGPT Decider 1), 5 open-weight families to run locally (the rest of the Kev size sweep, the larger
-d3 sizes, the leading community models, GLiNER2.5-Decide and GLiClass), 2 entries that need a track of their
+Decision, Hanzo Kai 1, meraGPT Decider 1), 6 open-weight entries to run locally (the rest of the Kev size sweep, the larger
+d3 sizes, the leading community models, GLiNER2.5-Decide, GLiClass and Naluri-561M), 2 entries that need a track of their
 own, and 3 on a watch list. [Round 7](#round-7-eight-small-open-weight-models-on-a-cpu-2026-10-18) ran the small
 open-weight models. Everything that runs as-is on OpenRouter's Decisions API has been benchmarked. Several vendors publish their own scores; none go on the
 site until they've run here like every other model.
@@ -341,7 +341,7 @@ The other open models need their own runners:
   version they need.
 - **`kev.serve`:** Kev 0.5B, 0.6B and 8B ship as LoRA adapters, served by [jaredpalmer/kev](https://github.com/jaredpalmer/kev)
   on `/v1/systemone`. It needs Python 3.12 or 3.13.
-- **Naluri `serve.py`:** the Naluri encoders (279M, 308M) answer `/v1/systemone` through `serve.py` in
+- **Naluri `serve.py`:** the Naluri encoders (279M, 308M, 561M) answer `/v1/systemone` through `serve.py` in
   [jerichosiahaya/naluri](https://github.com/jerichosiahaya/naluri), so `run_decisions.py --url` runs them:
   `python serve.py --model jerichosiahaya/Naluri-308M-encoder --port 8000`, then
   `run_decisions.py --url http://localhost:8000/v1/systemone --key-env "" --model naluri-308m --name naluri_308m --concurrency 1`.

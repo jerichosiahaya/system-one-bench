@@ -452,6 +452,11 @@
           "name": "GLiClass Multilang",
           "access": "knowledgator/gliclass-multilang-mini",
           "note": "Open weights on Hugging Face. Small zero-shot classifier trained on 20 languages including Arabic: a cheap multilingual floor."
+        },
+        {
+          "name": "Naluri-561M",
+          "access": "jerichosiahaya/Naluri-561M-encoder",
+          "note": "The XLM-RoBERTa large member of the Naluri family on the board (279M, 308M). Same training data as Naluri-308M, so the same overlap: train splits of XNLI, MASSIVE and DAIR Emotion. CC BY-NC 4.0. Runs with serve.py like the other two."
         }
       ]
     },
